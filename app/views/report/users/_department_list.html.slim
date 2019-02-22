@@ -1,0 +1,5 @@
+- unless @department.blank?
+  .block-grid-item
+    a.block-inner.card href="#{report_department_path(@department.id)}"
+      .block-description.card-body
+        h4.block-title = @department.name

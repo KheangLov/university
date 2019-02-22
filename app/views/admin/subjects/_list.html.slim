@@ -1,0 +1,5 @@
+- unless @subject.blank?
+    .block-grid-item
+      a.block-inner.card href="#{edit_admin_subject_path(@subject.id)}"
+        .block-description.card-body
+          h4.block-title = @subject.name

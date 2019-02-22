@@ -1,0 +1,22 @@
+.card.card-tasks
+  / .card-header
+  .card-body
+    = form_for @group, html:{method: (@group_method.blank?) ? "POST" : @group_method, class: "frm-custom" , id: "group_frm_id"}, url: @group_form_url do |f|
+      #message-wrapper
+        = render 'shared/error_messages'
+      .form-group
+        = f.label :name, for: 'group_name'
+        = f.text_field :name, class: 'form-control', placeholder: 'Name', autofocus: true
+      .form-group
+        label for='group_department_id' Department
+        = f.select :department_id, options_for_select(@departments.map { |department| [department.name, department.id] }), {}, class: 'form-control'
+      .form-group
+        = f.label :description, for: 'group_description'
+        = f.text_area :description, rows: 2, cols: 2, class: 'form-control', placeholder: 'Description'
+      .form-group
+        = link_to 'Cancel', admin_groups_path, class: 'btn btn-default'
+        span &nbsp;
+        - if @edit_btn && @edit_btn == true
+          = f.submit 'Update', class: 'btn btn-primary'
+        - else
+          = f.submit 'Save', class: 'btn btn-primary'

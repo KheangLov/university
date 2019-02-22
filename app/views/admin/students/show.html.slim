@@ -1,0 +1,23 @@
+.card.card-tasks
+  .card-body
+    h4 = (@department.blank?) ? "" : @department.name
+    h6 = @group.name
+    p = @student.name
+    .row
+      .col-sm-5
+        = render 'score_form'
+      .col-sm-7
+        table.table.table-striped
+          thead
+            tr
+              th Subject
+              th Score
+              th Homework
+              th Total
+          tbody#student_list_wrapper
+            - if @student_subjects.blank?
+                tr
+                  td colspan="4" No subject's score yet!
+            - else
+              - for @student_subject in @student_subjects
+                = render 'student_list'

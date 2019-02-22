@@ -1,0 +1,371 @@
+.card {
+  background-color: $white;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px -4px $box-shadow;
+  margin-bottom: 30px;
+  .card-header {
+    padding: 15px 15px 0 15px;
+
+    .add-post {
+      font-weight: bold;
+    }
+  }
+  .card-body {
+    padding: 15px;
+
+    .status {
+      display: block;
+      margin-top: 15px;
+
+      .fa {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+      }
+    }
+
+    .tabs-custom {
+
+      li {
+
+        a{
+          padding: 5px 9px;
+          font-size: 14px;
+        }
+      }
+
+      &.active {
+
+        a {
+          padding: 5px 10px;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .btn-wrap {
+      margin-top: 15px;
+    }
+
+    .text-wrap {
+      margin-top: 15px;
+
+      .sub-text {
+        opacity: 0.7;
+      }
+    }
+
+    .link-wrap {
+      margin-top: 15px;
+
+      .tags-link {
+        font-size: 12px;
+        text-decoration: underline;
+      }
+    }
+
+    .img-link {
+      text-decoration: underline;
+    }
+
+    .input-custom {
+      padding: 0;
+    }
+  }
+
+  .card-footer {
+    padding: 0 15px 15px 15px;
+
+    .add-cat {
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+  }
+  &.card-navbar {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  &.card-stats {
+    .card-body {
+      padding-bottom: 0px;
+      .fa {
+        font-size: 50px;
+      }
+      .fa-warning {
+        color: $warning;
+      }
+      .fa-success {
+        color: $success;
+      }
+      .fa-danger {
+        color: $danger;
+      }
+      .fa-infoo {
+        color: $info;
+      }
+      .text {
+        color: $gray-500;
+        display: block;
+        font-size: 16px;
+      }
+      .number {
+        color: $black;
+        font-size: 26px;
+      }
+    }
+    .card-footer {
+      .fa {
+        margin-right: 10px;
+        color: $gray-900;
+      }
+      .notify {
+        color: $gray-500;
+        font-size: 16px;
+      }
+    }
+  }
+  &.card-tasks {
+    .card-header {
+      .header {
+        color: $gray-900;
+        font-size: 28px;
+      }
+      .sub-header {
+        color: $gray-500;
+        font-size: 18px;
+      }
+    }
+    .card-body {
+      .table {
+        margin: 0;
+        .img-row {
+          .img-wrapper {
+            background-color: $main-wrapper;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+
+            .img-raised {
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+    .card-footer {
+      .fa {
+        margin-right: 10px;
+        color: $gray-700;
+      }
+      .notify {
+        color: $gray-700;
+        font-size: 16px;
+      }
+      hr {
+        margin-top: 0px;
+      }
+    }
+  }
+  &.card-work {
+    .card-header {
+      .header {
+        color: $gray-900;
+        font-size: 22px;
+      }
+      .sub-header {
+        color: $gray-500;
+        font-size: 14px;
+      }
+    }
+    .card-body {
+
+    }
+    .card-footer {
+      .fa-work {
+        margin-right: 5px;
+        color: $gray-800;
+      }
+      .work-text {
+        color: $gray-800;
+      }
+    }
+  }
+  &.card-profile {
+    .image {
+      height: 130px;
+      background-color: $black;
+      position: relative;
+      overflow: hidden;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+    .card-body {
+      position: absolute;
+      top: 45px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 9999;
+      .author {
+        a {
+          color: $info;
+          .img-profile {
+            border-radius: 50%;
+            height: 124px;
+          }
+          .author-name {
+            color: $info;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 15px 0;
+          }
+          &:hover, &:focus {
+            color: $info;
+          }
+        }
+        .slug {
+          margin-bottom: 15px;
+          font-size: 16px;
+          color: $gray-500;
+        }
+        .text-profile {
+          font-size: 16px;
+          color: $gray-500;
+        }
+      }
+    }
+    .card-footer {
+      padding-top: 240px;
+      .profile-footer {
+        display: block;
+        color: $gray-800;
+        font-size: 18px;
+      }
+    }
+  }
+  &.card-info {
+    .card-header {
+      .header {
+        font-size: 26px;
+        font-weight: bold;
+        color: $gray-800;
+      }
+      .header-login {
+        color: $primary;
+        font-size: 26px;
+        font-weight: bold;
+      }
+      .img-login {
+        margin: 0 auto;
+      }
+    }
+    .card-body {
+
+      .info-name {
+        font-size: 14px;
+        font-weight: 300;
+        color: $gray-500;
+      }
+
+      .password-wrap {
+        margin: 0;
+
+        .check-box {
+          margin: 30px 0;
+        }
+
+        .padd-top {
+          padding-top: 23px;
+  
+          .regi-link {
+            font-size: 22px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  &.card-transparent {
+    background: transparent;
+    box-shadow: none;
+    .card-header {
+      .header {
+        color: $gray-900;
+        font-size: 28px;
+      }
+      .sub-header {
+        color: $gray-500;
+        font-size: 18px;
+      }
+    }
+    .card-body {
+      .table {
+        margin: 0;
+        .tbody {
+          tr {
+            th {
+              font-size: 16px;
+            }
+            td {
+              padding: 13px 8px;
+              font-size: 15px;
+              color: $gray-700;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.card-colorful {
+    .card-header {
+      .header {
+        color: $gray-900;
+        font-size: 28px;
+      }
+    }
+    .card-body {
+      padding: 15px 0;
+      .table {
+        .tbody {
+          tr {
+            th {
+              font-size: 16px;
+            }
+            td {
+              padding: 13px 8px;
+              font-size: 15px;
+              color: $gray-700;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.pagination-wrap {
+
+  .pagination {
+
+    .active {
+
+      a {
+        background-color: $sidebar-bg;
+        color: $white;
+        border-color: $sidebar-bg;
+      }
+    }
+
+    li {
+      
+      a {
+        color: $sidebar-bg;
+      }
+    }
+  }
+}

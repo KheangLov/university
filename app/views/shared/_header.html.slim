@@ -1,0 +1,39 @@
+nav.navbar.navbar-default.navbar-main
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle.collapsed aria-expanded="false" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button" 
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand href="#" 
+        | Posts
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        li.dropdown
+          a.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button" 
+            i.fa.fa-bell
+            span.caret
+          ul.dropdown-menu.card.card-navbar
+            li
+              a href="#"  Action
+            li
+              a href="#"  Another action
+            li
+              a href="#"  Something else here
+        li.dropdown
+          a.dropdown-toggle.nav-user aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button" 
+            i.fa.fa-user.fa-nav
+          ul.dropdown-menu.card.card-navbar
+            li
+              a href="user.html"  Admin
+            li
+              a href="form.html"  Edit
+            li
+              a href="../login.html"  Log Out
+      form.navbar-form.navbar-right
+        .input-group
+          input.form-control placeholder="Search" type="text" /
+          span.input-group-btn
+            button.btn.btn-default type="submit" 
+              i.fa.fa-search

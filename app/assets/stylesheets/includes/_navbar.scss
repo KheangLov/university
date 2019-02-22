@@ -1,0 +1,124 @@
+.navbar-main {
+
+  .navbar-brand {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+
+  .navbar-nav {
+
+    li {
+
+      .nav-user {
+        padding-bottom: 10px;
+    
+        .fa-nav {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.navbar-custom {
+  background-color: $white;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+
+  .navbar-header {
+
+    .navbar-brand {
+      font-size: 26px;
+      font-weight: 600;
+      margin: 7px 0;
+      padding-left: 0;
+
+      .brand-image {
+        height: 32px;
+        display: inline;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .navbar-nav {
+
+    li {
+      border-radius: 6px;
+      padding: 15px 25px;
+      margin: 10px 0 10px 5px;
+      border: 2px solid transparent;
+
+      a {
+        font-size: 18px;
+        font-weight: bold;
+        padding: 0;
+      }
+
+      &.active, &:hover, &:focus {
+        background-color: $homepage-bg;
+        border: 2px solid transparent;
+      }
+    }
+
+    .btn-reg {
+      background-color: $primary;
+      border: 2px solid $primary;
+      margin-left: 30px;
+      margin-top: 15px;
+      padding: 8px 20px;
+    
+      .bcolor {
+        color: $white;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      &:hover, &:focus {
+        background-color: $btn-bcolor;
+      }
+    }
+    
+    .btn-log {
+      background-color: $white;
+      border: 2px solid $primary;
+      margin-right: 15px;
+      margin-top: 15px;
+      padding: 8px 20px;
+    
+      .bwhite {
+        color: $primary;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      &:hover, &:focus {
+        background-color: $primary;
+
+        .bwhite {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+  .navbar-custom {
+    
+    .navbar-nav {
+
+      .btn-reg {
+        margin: 10px 0 10px 5px;
+      }
+    
+      .btn-log {
+        margin: 10px 0 10px 5px;
+      }
+    }
+  }
+}

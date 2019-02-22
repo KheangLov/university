@@ -1,0 +1,5 @@
+- unless @student.blank?
+    .block-grid-item
+      a.block-inner.card href="#{admin_student_path(@student.id)}"
+        .block-description.card-body
+          h4.block-title = @student.name

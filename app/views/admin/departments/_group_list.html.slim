@@ -1,0 +1,5 @@
+- unless @group.blank?
+    .block-grid-item
+      a.block-inner.card href="#{admin_group_path(@group.id)}"
+        .block-description.card-body
+          h4.block-title = @group.name

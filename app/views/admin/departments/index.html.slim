@@ -1,0 +1,9 @@
+.row
+  .col-sm-5
+    = render 'add_depart_form'
+  .col-sm-7
+    - unless @departments.blank?
+      .section-wrapper
+        .block-grid-xs-2.block-grid-sm-4.block-grid-md-4.block-grid-lg-4 id="append_departments" 
+          - for @department in @departments
+            = render 'list'

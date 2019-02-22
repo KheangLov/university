@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title = APP::NAME
+    = stylesheet_link_tag "application", media: "all", 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body id="#{params[:controller].gsub(/\//, '_') + '_' + params[:action]}" data-controller=params[:controller].gsub(/\//, '_') data-action=params[:action] class="homepage-layout hold-transition login-page" data-url="#{request.base_url}"
+    .wrapper.clearfix
+    / = params
+    == yield

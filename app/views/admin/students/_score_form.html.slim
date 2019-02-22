@@ -1,0 +1,22 @@
+.card.card-tasks
+  / .card-header
+  .card-body
+    = form_for @student_subject, html:{method: (@student_subject_method.blank?) ? "POST" : @student_subject_method, class: "frm-customs" , id: "student_subject_frm_id"}, url: @student_subject_form_url do |f|
+      #message_wrapper
+        = render 'shared/error_messages'
+      .form-group
+        label for='student_subject_group_id' Subject
+        = f.select :subject_id, options_for_select(@subjects.map { |subject| [subject.name, subject.id] }), {}, class: 'form-control'
+      .form-group
+        = f.label :score, for: 'student_subject_score'
+        = f.text_field :score, class: 'form-control', placeholder: 'Score'
+      .form-group
+        = f.label :homework, for: 'student_subject_homework'
+        = f.text_field :homework, class: 'form-control', placeholder: 'Homework'
+      .form-group
+        = link_to 'Cancel', admin_students_path, class: 'btn btn-default'
+        span &nbsp;
+        - if @edit_btn && @edit_btn == true
+          = f.submit 'Update', class: 'btn btn-primary'
+        - else
+          = f.submit 'Save', class: 'btn btn-primary'

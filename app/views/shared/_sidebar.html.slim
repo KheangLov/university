@@ -1,0 +1,29 @@
+- ctrl_action = params[:controller].gsub(/\//, '_') + '_' + params[:action]
+aside#mySidenav.sidebar
+  .sidebar-header.text-center
+    h3.site-name = APP::NAME
+  ul.nav.nav-menu
+    li class="#{(['admin_users_dashboard', 'admin_departments_show', 'admin_groups_show', 'admin_students_show'].include?(ctrl_action)) ? "active": ""}"
+      = link_to admin_dashboard_path
+        i.fa.fa-tachometer
+        | Dashboard
+    li class="#{(['report_users_reports', 'report_departments_show', 'report_groups_show'].include?(ctrl_action)) ? "active": ""}"
+      = link_to report_reports_path
+        i.fa.fa-user
+        | Reports
+    li class="#{(['admin_departments_index', 'admin_departments_edit', 'admin_departments_new', 'admin_departments_create'].include?(ctrl_action)) ? "active": ""}"
+      = link_to admin_departments_path
+        i.fa.fa-user
+        | Departments
+    li class="#{(['admin_groups_index', 'admin_groups_edit', 'admin_groups_new'].include?(ctrl_action)) ? "active": ""}"
+      = link_to admin_groups_path
+        i.fa.fa-user
+        | Groups
+    li class="#{(['admin_students_index', 'admin_students_edit', 'admin_students_new'].include?(ctrl_action)) ? "active": ""}"
+      = link_to admin_students_path
+        i.fa.fa-user
+        | Students
+    li class="#{(['admin_subjects_index', 'admin_subjects_edit', 'admin_subjects_new'].include?(ctrl_action)) ? "active": ""}"
+      = link_to admin_subjects_path
+        i.fa.fa-user
+        | Subjects

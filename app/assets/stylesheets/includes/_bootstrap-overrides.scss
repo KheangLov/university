@@ -1,0 +1,92 @@
+// // Bootstrap overrides for this template
+// .text-primary {
+//   color: $primary !important;
+// }
+
+// .btn {
+//   font-weight: 700;
+//   text-transform: uppercase;
+//   border: none;
+//   border-radius: 300px;
+//   @include sans-serif-font;
+// }
+
+// .btn-xl {
+//   padding: 1rem 2rem;
+// }
+
+// .btn-primary {
+//   background-color: $primary;
+//   border-color: $primary;
+//   &:hover,
+//   &:focus,
+//   &:active {
+//     color: $white;
+//     background-color: darken($primary, 5%) !important;
+//   }
+//   &:active,
+//   &:focus {
+//     box-shadow: 0 0 0 0.2rem rgba(240, 95, 64,.5) !important;
+//   }
+// }
+.navbar-default {
+  .navbar-nav{
+    li {
+      .dropdown-menu {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        border: none;
+        padding: 0;
+        li{
+          border-top-left-radius: 12px;
+          border-top-right-radius: 12px;
+          a {
+            padding: 10px 25px;
+            color: $gray-700;
+            &:hover, &:focus {
+              background-color: $gray-800;
+              color: $gray-200;
+            }
+          }
+        }
+        li:first-child {
+          a {
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+          }
+          &:hover, &:focus {
+            a {
+              border-top-left-radius: 12px;
+              border-top-right-radius: 12px;
+            }
+          }
+        }
+        li:last-child {
+          a {
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+          }
+          &:hover, &:focus {
+            a {
+              border-bottom-left-radius: 12px;
+              border-bottom-right-radius: 12px;
+            }
+          }
+        }
+      }
+    }
+    .open {
+      a {
+        &:hover, &:focus {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+.main-wrapper {
+  .navbar-brand {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,19 @@
+.card.card-tasks
+  / .card-header
+  .card-body
+    = form_for @department, html:{method: (@department_method.blank?) ? "POST" : @department_method, class: "frm-custom" , id: "department_frm_id"}, url: @department_form_url do |f|
+      #message_wrapper
+        = render 'shared/error_messages'
+      .form-group
+        = f.label :name, for: 'department_name'
+        = f.text_field :name, class: 'form-control', placeholder: 'Name', autofocus: true
+      .form-group
+        = f.label :description, for: 'department_description'
+        = f.text_area :description, rows: 2, cols: 2, class: 'form-control', placeholder: 'Description'
+      .form-group
+        = link_to 'Cancel', admin_departments_path, class: 'btn btn-default'
+        span &nbsp;
+        - if @edit_btn && @edit_btn == true
+          = f.submit 'Update', class: 'btn btn-primary'
+        - else
+          = f.submit 'Save', class: 'btn btn-primary'

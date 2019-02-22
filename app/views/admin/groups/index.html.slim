@@ -1,0 +1,10 @@
+.row
+  .col-sm-5
+    = render 'form'
+  .col-sm-7
+    = link_to "Add New", new_admin_group_path, :class => "btn btn-primary"
+    - unless @groups.blank?
+      .section-wrapper
+        .block-grid-xs-2.block-grid-sm-4.block-grid-md-4.block-grid-lg-4
+          - for @group in @groups
+            = render 'list'

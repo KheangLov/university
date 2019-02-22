@@ -1,0 +1,110 @@
+.footer {
+  padding: 80px 0;
+  background-color: $white;
+  .inner-footer {
+    .brand-footer {
+      margin-bottom: 10px;
+      .mar-bot {
+        margin-bottom: 20px;
+        .no-padd {
+          padding: 0;
+          .logo-brand {
+            width: 56px;
+            height: 56px;
+            display: inline-block;
+            .img-logo {
+              max-width: 100%;
+              max-height: 100%;
+            }
+          }
+        }
+        .no-lpadd {
+          padding-left: 0;
+          .text-brand {
+            display: inline-block;
+            margin-top: 5px;
+            .name {
+              font-size: 20px;
+              font-weight: 600;
+              color: $gray-800;
+              margin: 0;
+              margin-bottom: 10px;
+            }
+            .text {
+              font-size: 16px;
+              font-weight: 600;
+              color: $gray-600;
+              margin: 0;
+            } 
+          }
+        }
+      }
+    }
+
+    .text-footer {
+      font-size: 16px;
+      font-weight: 600;
+      color: $gray-600;
+      line-height: 25px;
+      margin-bottom: 20px;
+    }
+
+    .cpyr-footer {
+      font-size: 16px;
+      font-weight: 600;
+      color: $gray-600;
+      &:hover, &:focus {
+        color: $primary;
+        text-decoration: none;
+      }
+    }
+
+    .menu-header {
+      font-size: 19px;
+      font-weight: 600;
+      margin: 0 0 20px 0;
+      color: $gray-800;
+    }
+
+    ul {
+
+      li {
+        margin-bottom: 10px;
+
+        a {
+          font-size: 16px;
+          font-weight: 600;
+          color: $gray-600;
+
+          &:hover, &:focus {
+            color: $gray-800;
+            text-decoration: none;
+          }
+
+          .fa {
+            width: 20px;
+            height: 20px;
+            font-size: 18px;
+            margin-right: 10px;
+          }
+
+          .fa-facebook-square {
+            color: $facebook;
+          }
+
+          .fa-twitter {
+            color: $twitter;
+          }
+
+          .fa-instagram {
+            color: $instagram;
+          }
+
+          .fa-google-plus {
+            color: $google-plus;
+          }
+        }
+      }
+    }
+  }
+}

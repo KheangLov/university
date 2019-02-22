@@ -1,0 +1,21 @@
+.card.card-tasks
+  .card-header
+    h4 = (@department.blank?) ? "" : @department.name
+    h6 = @group.name
+  .card-body
+    .table.table-striped
+      thead
+        tr
+          th Student Name
+          th Total
+      tbody
+        - for @student in @students
+          tr
+            td = @student.name
+            td = @student.student_subjects.total
+
+- unless @students.blank?
+  .section-wrapper
+    .block-grid-xs-2.block-grid-sm-4.block-grid-md-4.block-grid-lg-4
+      - for @student_subject in @student_subjects
+        = render 'student_list'

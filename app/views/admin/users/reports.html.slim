@@ -1,0 +1,7 @@
+.row
+  .col-sm-12
+    - unless @departments.blank?
+      .section-wrapper
+        .block-grid-xs-2.block-grid-sm-4.block-grid-md-4.block-grid-lg-4
+          - for @department in @departments
+            = render 'department_report'

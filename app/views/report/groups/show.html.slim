@@ -1,0 +1,44 @@
+.card.card-tasks
+  .card-body
+    h4 = (@department.blank?) ? "" : @department.name
+    h6 = @group.name
+    table.table.table-striped
+      thead
+        tr
+          th Student
+          th Gender
+          th Total
+      tbody
+        - arr_name = []
+        - arr_gen = []
+        - arr_score = []
+        - sub_name = []
+        - for @student_subject in @student_subjects
+          - unless sub_name.include? @student_subject.subject.name
+            - sub_name << @student_subject.subject.name
+            - arr_score << @student_subject.total
+
+          - unless arr_name.include? @student_subject.student.name
+            - arr_name << @student_subject.student.name
+            - arr_gen << @student_subject.student.gender
+        / tr
+        /   td = sub_name.count
+
+          / - all_score += i.total
+          / - unless arr_name.include?
+          /   - arr_name << @student_subject.name
+        - all_score = 0
+        - arr_name.each do |n|
+          tr
+            td = n
+            - arr_gen.each do |g|
+              td = g
+              - break
+            - arr_score.each do |as|
+              - all_score += as.to_f
+              td = all_score / sub_name.count.to_f
+              - break
+
+            / - arr_score.each do |s|
+            /   td = s
+            /   / - break

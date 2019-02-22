@@ -1,0 +1,74 @@
+.main-wrapper {
+  position: relative;
+  background-color: $main-wrapper;
+  width: calc(100% - 260px);
+  float: right;
+}
+
+.login-wrapper {
+  margin-top: 100px;
+
+  .btn-getstarted {
+    border-radius: 12px;
+    background-color: $primary;
+    font-size: 14px;
+    font-weight: bold;
+    color: $white;
+    text-transform: uppercase;
+    border-color: $primary;
+    opacity: 0.7;
+
+    &:hover, &:focus {
+      color: $white;
+      background-color: $primary;
+      border-color: $primary;
+      opacity: 1;
+    }
+  }
+
+  .back-wrapper {
+    margin-top: 15px;
+    margin-right: 5px;
+
+    .back-to {
+      font-size: 13px;
+      font-weight: 500;
+    }
+  }
+
+  .register-wrapper {
+    margin-top: 15px;
+    margin-right: 5px;
+
+    .regi-link {
+      font-size: 13px;
+      font-weight: 500;
+    }
+  }
+}
+
+.navbar-main {
+  border-radius: 0;
+  margin: 0;
+  padding: 10px 15px;
+  background-color: $main-wrapper;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+}
+
+.content {
+  width: 100%;
+  padding: 30px;
+}
+
+.footer-be {
+  .copyright {
+    font-size: 14px;
+    color: $gray-600;
+    margin-right: 15px;
+    .fa-danger {
+      color: $danger;
+    }
+  }
+}

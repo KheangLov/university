@@ -1,0 +1,36 @@
+.row
+  .col-sm-5
+    .card.card-tasks
+      / .card-header
+      .card-body
+        = form_for @student, html:{method: (@student_method.blank?) ? "POST" : @student_method, class: "frm-custom" , id: "student_frm_id"}, url: @student_form_url do |f|
+          #message-wrapper
+            = render 'shared/error_messages'
+          .form-group
+            = f.label :lastname, for: 'student_lastname'
+            = f.text_field :lastname, class: 'form-control', placeholder: 'Lastname', autofocus: true
+          .form-group
+            = f.label :firstname, for: 'student_firstname'
+            = f.text_field :firstname, class: 'form-control', placeholder: 'Firstname', autofocus: true
+          .form-group
+            = f.label :gender, for: 'student_gender'
+            = f.select :gender, options_for_select(['Male', 'Female']), {}, class: 'form-control'
+          .form-group
+            label for='student_group_id' Group
+            = f.select :group_id, options_for_select(@groups.map { |group| [group.name, group.id] }), {}, class: 'form-control'
+          .form-group
+            = f.label :dob, for: 'student_dob'
+            = f.text_field :dob, class: 'form-control', placeholder: 'Date of Birth', autofocus: true
+          .form-group
+            = f.label :email, for: 'student_email'
+            = f.text_field :email, class: 'form-control', placeholder: 'Email', autofocus: true
+          .form-group
+            = f.label :phone, for: 'student_phone'
+            = f.text_field :phone, class: 'form-control', placeholder: 'Phone', autofocus: true
+          .form-group
+            = link_to 'Cancel', admin_students_path, class: 'btn btn-default'
+            span &nbsp;
+            - if @edit_btn && @edit_btn == true
+              = f.submit 'Update', class: 'btn btn-primary'
+            - else
+              = f.submit 'Save', class: 'btn btn-primary'
